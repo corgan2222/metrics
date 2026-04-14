@@ -18,9 +18,10 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           # Options
-          
+          user: corgan2222
           template: classic
           base: header, activity, community, repositories, metadata
+          config_display: columns
           config_timezone: Europe/Berlin
           plugin_followup: yes
           plugin_followup_archived: yes
@@ -30,6 +31,7 @@ jobs:
           plugin_lines_repositories_limit: 4
           plugin_lines_sections: base
           plugin_notable: yes
-          plugin_notable_from: organization
+          plugin_notable_from: all
           plugin_notable_repositories: yes
           plugin_notable_types: commit
+          repositories_forks: yes
